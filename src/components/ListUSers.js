@@ -20,10 +20,17 @@ export default class ListUsers extends Component {
       })
   }
 
+  removeUser = (user) => {
+    const { id } = user
+    const users = this.state.users.filter((user, key) => {
+      return user.id !== id
+    })
+    this.setState({ users })
+  }
 
   render() {
     const users = this.state.users.map((user, key) =>
-        <li key={user.login} >
+        <li key={user.login} onClick={this.removeUser.bind(this, user)}>
           <User
             name={user.login}/>
         </li>
