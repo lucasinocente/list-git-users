@@ -18,7 +18,7 @@ export default class ListUsers extends Component {
       this.setState({ users })
     })
     .catch(err => {
-      console.error('Erro de leitura da API')
+      console.error({ err })
     })
   }
 
@@ -41,7 +41,3 @@ export default class ListUsers extends Component {
     );
   }
 }
-
-
-
-
