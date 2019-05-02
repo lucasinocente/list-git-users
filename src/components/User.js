@@ -3,9 +3,9 @@ import React, { Component } from "react";
 export default class User extends Component {
   render() {
     return (
-      <div>
+      <li onClick={this.props.removeUser.bind(this, this.props)}>
         <p>Usuário: { this.props.name } </p>
-      </div>
+      </li>
     );
   }
 }
