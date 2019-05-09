@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from 'axios';
 
 import 'bulma/css/bulma.css';
-import './App.css';
 
 import Hero from '../components/Hero/Hero';
 import Users from '../components/Users/Users';
