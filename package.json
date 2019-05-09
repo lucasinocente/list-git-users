@@ -5,12 +5,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bloomer": "^0.6.5",
+    "express": "^4.16.4",
     "react": "^16.8.6",
     "react-bulma-components": "^2.3.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
   },
   "scripts": {
+    "start": "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
