@@ -1,7 +1,5 @@
 # List Github Users
 
-[https://list-git-users.appspot.com/](https://list-git-users.appspot.com/)
-
 ## CSS
 
 - [Bulma](https://bulma.io/)
