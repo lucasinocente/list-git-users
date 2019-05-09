@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import User from './User';
-import { Columns } from 'bloomer';
+import User from './User/User';
+import { Container, Columns } from 'bloomer';
 
 export default class ListUsers extends Component {
   constructor(props) {
@@ -29,15 +29,18 @@ export default class ListUsers extends Component {
 
   render() {
     return (
-      <Columns isMobile isMultiline>
-        {this.state.users.map((user, key) =>
-          <User
-            user={user}
-            key={key}
-            removeUser={this.removeUser}
-          />
-        )}
-      </Columns>
+      <Container>
+        <hr/>
+        <Columns isMobile isMultiline>
+          {this.state.users.map((user, key) =>
+            <User
+              user={user}
+              key={key}
+              removeUser={this.removeUser}
+            />
+          )}
+        </Columns>
+      </Container>
     );
   }
 }
