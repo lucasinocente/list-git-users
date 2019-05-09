@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Column, Card, CardContent, Media, MediaLeft,
   Image, MediaContent, Title, Subtitle, Content, Button } from 'bloomer';
 
-export default class User extends Component {
-  render() {
-    const { login, avatar_url, id, html_url  } = this.props.user
+const user = (props) => {
+    const { login, avatar_url, id, html_url  } = props.user
     return (
       <Column isSize={{mobile: 'full', tablet:"1/3", desktop:"1/3"}}>
         <Card>
@@ -21,11 +20,12 @@ export default class User extends Component {
             </Media>
             <hr/>
             <Content>
-              <Button isColor='danger' isOutlined  onClick={() => this.props.clicked(id)}>{this.props.buttonText}</Button>
+              <Button isColor='danger' isOutlined  onClick={() => props.clicked(id)}>{props.buttonText}</Button>
             </Content>
           </CardContent>
         </Card>
       </Column>
     )
-  }
 }
+
+export default user

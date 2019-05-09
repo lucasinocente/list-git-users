@@ -1,23 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import User from './User/User';
 import { Container, Columns } from 'bloomer';
+import './Users.css';
 
-export default class ListUsers extends Component {
-  render() {
+const users = (props) => {
     return (
       <Container>
         <hr/>
         <Columns isMobile isMultiline>
-          {this.props.users.map((user, key) =>
+          {props.users.map((user, key) =>
             <User
               user={user}
               key={key}
-              clicked={this.props.removeUser}
+              clicked={props.removeUser}
               buttonText="Delete User"
             />
           )}
         </Columns>
       </Container>
-    );
-  }
+    )
 }
+
+export default users
