@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import User from './User';
-import { Columns } from 'bloomer';
 
-export default class ListUsers extends Component {
+import 'bulma/css/bulma.css';
+
+import Hero from '../components/Hero/Hero';
+import Users from '../components/Users/Users';
+
+export default class App extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -29,15 +33,10 @@ export default class ListUsers extends Component {
 
   render() {
     return (
-      <Columns isMobile isMultiline>
-        {this.state.users.map((user, key) =>
-          <User
-            user={user}
-            key={key}
-            removeUser={this.removeUser}
-          />
-        )}
-      </Columns>
+      <div>
+        <Hero title="Lista de usuários do Github:"/>
+        <Users users={this.state.users} removeUser={this.removeUser}/>
+      </div>
     );
   }
 }
